@@ -38,7 +38,7 @@ There's an experimental patch for windows in this [PR](https://github.com/udacit
 Tips for setting up your environment can be found [here](https://classroom.udacity.com/nanodegrees/nd013/parts/40f38239-66b6-46ec-ae68-03afd8a601c8/modules/0949fca6-b379-42af-a919-ee50aa304e6a/lessons/f758c44c-5e40-4e01-93b5-1a82aa4e044f/concepts/23d376c7-0195-4276-bdf0-e02f1f3c665d)
 
 ## Overview
-In this project, I used a PD controller for steering and a P controller for throttle to control the car. The P part is proportional to the error: for steering it is the distance from the desired track, and for throttle, it is the speed difference from the speed limit. The D part is proportional to the gradient of the error; we use to it in steering control to minimize the wobbling. I did not use the I term in a PID controller as I didn't not find systematic drifting issues.
+In this project, I used a PD controller for steering and a P controller for throttle to control the car. The P part is proportional to the error: for steering it is the distance from the desired track, and for throttle, it is the speed difference from the speed limit. The D part is proportional to the gradient of the error; we use to it in steering control to minimize the wobbling. I did not use the I (integral) term in a PID controller as I didn't find systematic drifting issues. The twiddle tuning returns the optimal I as 0.
 
 ## Parameter Tuning
 The twiddle class is responsible for parameter tuning. However, in reality, it was not particularly helpful. It is highly sensitive to the initialization. In addition, given there is no way to speed up the simulator, it took excruciatingly long before convergence. 
@@ -47,4 +47,4 @@ The key to make the car drive on track ends up to be controlling the speed. I se
 
 ## Final Results
 
-![Alt Text] (https://d3uik7083b30dy.cloudfront.net/items/1c0C3A11062E3s1G2Q2e/Screen%20Recording%202018-05-06%20at%2004.08%20PM.gif)
+![Alt Text](https://d3uik7083b30dy.cloudfront.net/items/1c0C3A11062E3s1G2Q2e/Screen%20Recording%202018-05-06%20at%2004.08%20PM.gif)
